@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "frest-autism-addons",
+  "version": "${version}",
+  "name": "frest's autism addons",
+  "description": "Twenty-three automation and quality-of-life modules for AUTISM Client.",
+  "authors": [
+    "Forest"
+  ],
+  "custom": {
+    "autism:color": "220,170,80",
+    "modmenu": {
+      "parent": {
+        "id": "autism"
+      }
+    }
+  },
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.forest.frest.FrestInit"
+    ],
+    "autism": [
+      "com.forest.frest.FrestAddon"
+    ]
+  },
+  "mixins": [
+    "frest-autism-addons.mixins.json"
+  ],
+  "depends": {
+    "java": ">=25",
+    "minecraft": "${mc_compat}",
+    "fabricloader": ">=0.19.3",
+    "fabric-api": ">=${fabric_api_version}",
+    "autism": "*"
+  }
+}

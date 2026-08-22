@@ -1,0 +1,14 @@
+.gradle/
+build/
+run/
+*.log
+.idea/
+*.iml
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp

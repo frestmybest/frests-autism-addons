@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.forest.frest.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "EntityPushMixin",
+    "TitleBrandingMixin",
+    "WobbleMixin",
+    "WobbleOverlayMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

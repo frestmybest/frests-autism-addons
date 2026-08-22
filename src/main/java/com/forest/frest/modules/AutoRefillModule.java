@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -52,7 +53,7 @@ public final class AutoRefillModule extends Module {
     private int cooldown;
 
     public AutoRefillModule() {
-        super(FrestAddon.ID + ":auto-refill", "AutoRefill", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-refill", "AutoRefill", ModuleCategory.PLAYER,
             "Refills running-low hotbar stacks from your inventory.");
     }
 

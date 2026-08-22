@@ -4,6 +4,7 @@ import com.forest.frest.FrestAddon;
 
 import autismclient.api.module.BoolSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 /**
  * Removes the screen distortion from nausea and nether portals.
@@ -33,7 +34,7 @@ public final class AntiWobbleModule extends Module {
         .group("Overlays"));
 
     public AntiWobbleModule() {
-        super(FrestAddon.ID + ":anti-wobble", "AntiWobble", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":anti-wobble", "AntiWobble", ModuleCategory.RENDER,
             "Disables the wobble effect from nausea and portals.");
         instance = this;
     }

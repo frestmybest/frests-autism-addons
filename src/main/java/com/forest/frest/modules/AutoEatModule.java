@@ -6,6 +6,7 @@ import autismclient.api.module.BoolSetting;
 import autismclient.api.module.EnumSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 import autismclient.util.AutismKeyMappingBridge;
 
@@ -142,7 +143,7 @@ public final class AutoEatModule extends Module {
     private long lastMealEnded;
 
     public AutoEatModule() {
-        super(FrestAddon.ID + ":auto-eat", "AutoEat", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-eat", "AutoEat", ModuleCategory.PLAYER,
             "Automatically eats to keep hunger and saturation topped up.");
     }
 

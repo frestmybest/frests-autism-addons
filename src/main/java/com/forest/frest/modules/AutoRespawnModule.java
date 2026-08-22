@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.network.protocol.game.ServerboundClientCommandPacket;
 
@@ -23,7 +24,7 @@ public final class AutoRespawnModule extends Module {
     private boolean armed;
 
     public AutoRespawnModule() {
-        super(FrestAddon.ID + ":auto-respawn", "AutoRespawn", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-respawn", "AutoRespawn", ModuleCategory.MISC,
             "Respawns you automatically after death.");
     }
 

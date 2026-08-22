@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -56,7 +57,7 @@ public final class AutoBucketModule extends Module {
     private int cooldown;
 
     public AutoBucketModule() {
-        super(FrestAddon.ID + ":auto-bucket", "AutoBucket", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-bucket", "AutoBucket", ModuleCategory.MOVEMENT,
             "Water-clutches a long fall with a bucket you actually own.");
     }
 

@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryClickHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -47,7 +48,7 @@ public final class AutoSmeltModule extends Module {
     private int cooldown;
 
     public AutoSmeltModule() {
-        super(FrestAddon.ID + ":auto-smelt", "AutoSmelt", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-smelt", "AutoSmelt", ModuleCategory.PLAYER,
             "Keeps an open furnace fed and collects its output.");
     }
 

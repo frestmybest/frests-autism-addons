@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismKeyMappingBridge;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -54,7 +55,7 @@ public final class AutoShieldModule extends Module {
     private boolean forcedUse;
 
     public AutoShieldModule() {
-        super(FrestAddon.ID + ":auto-shield", "AutoShield", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-shield", "AutoShield", ModuleCategory.COMBAT,
             "Raises your shield against incoming projectiles.");
     }
 

@@ -6,6 +6,7 @@ import autismclient.api.module.BoolSetting;
 import autismclient.api.module.EnumSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.client.player.LocalPlayer;
 
@@ -46,7 +47,7 @@ public final class BunnyhopModule extends Module {
     private int cooldown;
 
     public BunnyhopModule() {
-        super(FrestAddon.ID + ":bunnyhop", "Bunnyhop", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":bunnyhop", "Bunnyhop", ModuleCategory.MOVEMENT,
             "Automatically jumps based on the Jump If condition.");
     }
 

@@ -7,6 +7,7 @@ import autismclient.api.module.IntSetting;
 import autismclient.api.module.KeybindSetting;
 import autismclient.api.module.RegistryListSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 import autismclient.util.AutismNotifications;
 
@@ -76,7 +77,7 @@ public final class SurroundModule extends Module {
     private boolean warned;
 
     public SurroundModule() {
-        super(FrestAddon.ID + ":surround", "Surround", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":surround", "Surround", ModuleCategory.COMBAT,
             "Places blocks around your own feet.");
     }
 

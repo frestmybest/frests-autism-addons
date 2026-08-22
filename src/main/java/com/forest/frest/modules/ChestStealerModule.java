@@ -7,6 +7,7 @@ import autismclient.api.module.ChoiceSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.api.module.RegistryListSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryClickHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -58,7 +59,7 @@ public final class ChestStealerModule extends Module {
     private int cooldown;
 
     public ChestStealerModule() {
-        super(FrestAddon.ID + ":chest-stealer", "ChestStealer", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":chest-stealer", "ChestStealer", ModuleCategory.PLAYER,
             "Empties or fills an open container with shift-clicks.");
     }
 

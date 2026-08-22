@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.KeybindSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryClickHelper;
 import autismclient.util.AutismInventoryHelper;
 import autismclient.util.AutismNotifications;
@@ -46,7 +47,7 @@ public final class ElytraSwapModule extends Module {
     private int cooldown;
 
     public ElytraSwapModule() {
-        super(FrestAddon.ID + ":elytra-swap", "ElytraSwap", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":elytra-swap", "ElytraSwap", ModuleCategory.MOVEMENT,
             "Swaps between elytra and chestplate.");
     }
 

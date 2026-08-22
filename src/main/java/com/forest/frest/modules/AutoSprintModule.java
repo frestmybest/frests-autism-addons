@@ -4,6 +4,7 @@ import com.forest.frest.FrestAddon;
 
 import autismclient.api.module.BoolSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.client.player.LocalPlayer;
 
@@ -33,7 +34,7 @@ public final class AutoSprintModule extends Module {
         .group("Conditions"));
 
     public AutoSprintModule() {
-        super(FrestAddon.ID + ":auto-sprint", "AutoSprint", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-sprint", "AutoSprint", ModuleCategory.MOVEMENT,
             "Automatically sprints whenever you walk.");
     }
 

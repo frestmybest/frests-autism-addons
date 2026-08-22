@@ -1,7 +1,8 @@
 # frest's autism addons
 
 An addon for [AUTISM Client](https://github.com/AutismDevelopment/Autism-Client).
-Twenty-three modules in their own category, plus title screen branding.
+Twenty-four modules, sorted into the client's own categories and tinted purple
+so you can tell them apart from builtins. Plus title screen branding.
 
 ## Building
 
@@ -67,6 +68,12 @@ Movement and comfort:
 | **AntiWobble** | Removes the nausea and portal screen distortion. |
 | **BowSpam** | Releases the bow at a chosen draw time and redraws. |
 
+These sit in the client's existing Combat / Movement / Player / Misc / Render
+columns rather than a separate dropdown. A 24th module, **Frest Addons** under
+Misc, controls how they're drawn: the purple tint (#4a15a1 by default), how much
+it darkens when a module is on, and the note in the module menu's top-left.
+Turning it off changes appearance only — no module's behaviour depends on it.
+
 Every module's settings render through the client's own module screen — there
 is no GUI code in this addon. `BoolSetting` becomes a toggle, `IntSetting` a
 slider, `EnumSetting` a cycle button, and `.group(...)` a section header.
@@ -85,13 +92,15 @@ Three of these duplicate functionality the client already ships:
 
 ## Mixins
 
-Four, all with `require = 0`, so a mapping change degrades to "this module does
+Six, all with `require = 0`, so a mapping change degrades to "this module does
 nothing" instead of a launch crash:
 
 - `EntityPushMixin` — `LivingEntity.doPush`
 - `WobbleMixin` — `GameRenderer.renderLevel`
 - `WobbleOverlayMixin` — `Hud.extractConfusionOverlay` / `extractPortalOverlay`
 - `TitleBrandingMixin` — `AutismTitleScreen.extractRenderState`
+- `ModuleMenuTintMixin` — `VanillaModuleMenuController.renderModuleRow`
+- `ModuleMenuLabelMixin` — `VanillaModuleMenuController.render`
 
 `TitleBrandingMixin` targets `AutismTitleScreen`, not vanilla's `TitleScreen`:
 the client swaps the title screen for its own class, which extends `Screen`

@@ -7,6 +7,7 @@ import autismclient.api.module.ChoiceSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.api.module.RegistryListSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
@@ -115,7 +116,7 @@ public final class VeinMinerModule extends Module {
     private int cooldown;
 
     public VeinMinerModule() {
-        super(FrestAddon.ID + ":vein-miner", "VeinMiner", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":vein-miner", "VeinMiner", ModuleCategory.PLAYER,
             "Finishes the whole vein once you start breaking one ore.");
     }
 

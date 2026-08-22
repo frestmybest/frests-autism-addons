@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -99,7 +100,7 @@ public final class AutoFarmModule extends Module {
     private int deferredRestoreSlot = -1;
 
     public AutoFarmModule() {
-        super(FrestAddon.ID + ":auto-farm", "AutoFarm", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-farm", "AutoFarm", ModuleCategory.PLAYER,
             "Harvests and replants crops around you.");
     }
 

@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.InteractionHand;
@@ -45,7 +46,7 @@ public final class BowSpamModule extends Module {
     private int cooldown;
 
     public BowSpamModule() {
-        super(FrestAddon.ID + ":bow-spam", "BowSpam", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":bow-spam", "BowSpam", ModuleCategory.COMBAT,
             "Releases the bow at a set draw time and redraws.");
     }
 

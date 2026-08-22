@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -72,7 +73,7 @@ public final class AutoPotModule extends Module {
     private int sinceDamage = 9999;
 
     public AutoPotModule() {
-        super(FrestAddon.ID + ":auto-pot", "AutoPot", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-pot", "AutoPot", ModuleCategory.COMBAT,
             "Throws a splash healing potion at your feet when low.");
     }
 

@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismKeyMappingBridge;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -51,7 +52,7 @@ public final class AutoMineModule extends Module {
     private long enabledAt;
 
     public AutoMineModule() {
-        super(FrestAddon.ID + ":auto-mine", "AutoMine", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-mine", "AutoMine", ModuleCategory.PLAYER,
             "Mines the block under your crosshair as if attack were held down.");
     }
 

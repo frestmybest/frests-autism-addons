@@ -3,8 +3,6 @@ package com.forest.frest;
 import autismclient.api.ApiVersion;
 import autismclient.api.AutismAddon;
 import autismclient.api.AutismAddons;
-import autismclient.modules.ModuleCategory;
-
 import com.forest.frest.modules.AutoBreedModule;
 import com.forest.frest.modules.AutoGappleModule;
 import com.forest.frest.modules.AutoBucketModule;
@@ -15,6 +13,7 @@ import com.forest.frest.modules.AutoShieldModule;
 import com.forest.frest.modules.AutoSmeltModule;
 import com.forest.frest.modules.ChestStealerModule;
 import com.forest.frest.modules.ElytraSwapModule;
+import com.forest.frest.modules.FrestSettingsModule;
 import com.forest.frest.modules.SurroundModule;
 import com.forest.frest.modules.AntiEntityPushModule;
 import com.forest.frest.modules.AntiWaterPushModule;
@@ -35,14 +34,6 @@ public final class FrestAddon extends AutismAddon {
     /** Shown on the title screen; keep in sync with gradle.properties. */
     public static final String VERSION = "v2.13";
 
-    /**
-     * A dedicated category, so every module here lands in its own dropdown
-     * rather than being scattered through Player / Movement / Misc.
-     * registerAddon() is idempotent, so referencing this from any module is safe.
-     */
-    public static final ModuleCategory CATEGORY =
-        ModuleCategory.registerAddon(ID, "frest's autism addons");
-
     @Override
     public int apiVersion() {
         return ApiVersion.CURRENT;
@@ -50,6 +41,9 @@ public final class FrestAddon extends AutismAddon {
 
     @Override
     public void onInitialize() {
+        // Registered first: the menu mixins read their colour from it.
+        AutismAddons.modules().register(new FrestSettingsModule());
+
         AutismAddons.modules().register(new AutoEatModule());
         AutismAddons.modules().register(new AutoMineModule());
         AutismAddons.modules().register(new VeinMinerModule());

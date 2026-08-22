@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -55,7 +56,7 @@ public final class AutoMilkModule extends Module {
     private int deferredRestore = -1;
 
     public AutoMilkModule() {
-        super(FrestAddon.ID + ":auto-milk", "AutoMilk", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-milk", "AutoMilk", ModuleCategory.PLAYER,
             "Drinks milk when a harmful effect lands on you.");
     }
 

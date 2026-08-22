@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 import autismclient.util.AutismKeyMappingBridge;
 
@@ -55,7 +56,7 @@ public final class AutoGappleModule extends Module {
     private boolean eating;
 
     public AutoGappleModule() {
-        super(FrestAddon.ID + ":auto-gapple", "AutoGapple", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-gapple", "AutoGapple", ModuleCategory.PLAYER,
             "Eats a golden apple when your health drops.");
     }
 

@@ -7,6 +7,7 @@ import autismclient.api.module.ChoiceSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.api.module.RegistryListSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismDropHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -70,7 +71,7 @@ public final class AutoDropModule extends Module {
     private int cooldown;
 
     public AutoDropModule() {
-        super(FrestAddon.ID + ":auto-drop", "AutoDrop", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-drop", "AutoDrop", ModuleCategory.PLAYER,
             "Throws away configured junk items.");
     }
 

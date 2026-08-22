@@ -4,6 +4,7 @@ import com.forest.frest.FrestAddon;
 
 import autismclient.api.module.BoolSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -30,7 +31,7 @@ public final class AntiEntityPushModule extends Module {
         .group("Sources"));
 
     public AntiEntityPushModule() {
-        super(FrestAddon.ID + ":anti-entity-push", "AntiEntityPush", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":anti-entity-push", "AntiEntityPush", ModuleCategory.MOVEMENT,
             "Prevents other players and mobs from pushing you around.");
         instance = this;
     }

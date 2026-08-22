@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 import autismclient.util.AutismInventoryHelper;
 
 import net.minecraft.client.player.LocalPlayer;
@@ -70,7 +71,7 @@ public final class AutoBreedModule extends Module {
     private int deferredRestore = -1;
 
     public AutoBreedModule() {
-        super(FrestAddon.ID + ":auto-breed", "AutoBreed", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":auto-breed", "AutoBreed", ModuleCategory.PLAYER,
             "Feeds animals to breed them and shears sheep.");
     }
 

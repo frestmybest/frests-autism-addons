@@ -5,6 +5,7 @@ import com.forest.frest.FrestAddon;
 import autismclient.api.module.BoolSetting;
 import autismclient.api.module.IntSetting;
 import autismclient.modules.Module;
+import autismclient.modules.ModuleCategory;
 
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.phys.Vec3;
@@ -42,7 +43,7 @@ public final class AntiWaterPushModule extends Module {
         .group("Fluids"));
 
     public AntiWaterPushModule() {
-        super(FrestAddon.ID + ":anti-water-push", "AntiWaterPush", FrestAddon.CATEGORY,
+        super(FrestAddon.ID + ":anti-water-push", "AntiWaterPush", ModuleCategory.MOVEMENT,
             "Prevents flowing water and lava from pushing you.");
     }
 

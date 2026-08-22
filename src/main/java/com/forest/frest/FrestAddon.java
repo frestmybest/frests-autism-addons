@@ -13,7 +13,6 @@ import com.forest.frest.modules.AutoShieldModule;
 import com.forest.frest.modules.AutoSmeltModule;
 import com.forest.frest.modules.ChestStealerModule;
 import com.forest.frest.modules.ElytraSwapModule;
-import com.forest.frest.modules.FrestSettingsModule;
 import com.forest.frest.modules.SurroundModule;
 import com.forest.frest.modules.AntiEntityPushModule;
 import com.forest.frest.modules.AntiWaterPushModule;
@@ -41,9 +40,6 @@ public final class FrestAddon extends AutismAddon {
 
     @Override
     public void onInitialize() {
-        // Registered first: the menu mixins read their colour from it.
-        AutismAddons.modules().register(new FrestSettingsModule());
-
         AutismAddons.modules().register(new AutoEatModule());
         AutismAddons.modules().register(new AutoMineModule());
         AutismAddons.modules().register(new VeinMinerModule());
